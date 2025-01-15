@@ -26,18 +26,24 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5rem;
+    text-shadow: 0 0 8px var(--accent-color), 0 0 16px var(--hover-color);
 }
 
 header p {
     margin: 0.5rem 0 0;
 }
 
-section {
+main {
+    display: grid;
+    gap: 2rem;
     padding: 2rem;
 }
 
-#umiejetnosci h2 {
+#umiejetnosci {
     text-align: center;
+}
+
+#umiejetnosci h2 {
     color: var(--accent-color);
 }
 
@@ -57,15 +63,13 @@ section {
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
 .card {
     background-color: var(--card-bg);
-    width: 300px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
@@ -116,9 +120,4 @@ footer {
 
 footer p {
     margin: 0;
-}
-
-
-header h1, #umiejetnosci h2 {
-    text-shadow: 0 0 8px var(--accent-color), 0 0 16px var(--hover-color);
 }
